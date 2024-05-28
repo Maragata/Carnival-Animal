@@ -13,12 +13,12 @@ nav {
     align-items: center;
     width: 100%;
     padding: 0 20px;
-  }
-  
+}
+
 .logo{   
     margin-left: 0px; 
     height: 50px; /* Ajusta el tamaño del logo */
- }
+}
 
 .MenuPrincipal {
     list-style: none;
@@ -36,12 +36,11 @@ nav {
 }
 
 .central {
-    border: 2px solid black;
     width: 50%;
 }
 .img {
     width: 100%;
-    border:solid;
+   
     height: 60%;
     display: flex;
     justify-content: center;
@@ -84,7 +83,6 @@ footer {
     justify-content: flex-end;
     width: 100%;
     align-items:flex-end;
-    border: 2px solid black;
     height: 8%;
 }
 
