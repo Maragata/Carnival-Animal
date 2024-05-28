@@ -1,7 +1,40 @@
 body {
     background-color: #fbecfa;
-    margin:0;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centra el contenido del cuerpo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
 }
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+.logo{   
+    margin-left: 0px; 
+    height: 50px; /* Ajusta el tamaño del logo */
+ }
+
+.MenuPrincipal {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.MenuPrincipal li {
+    margin-left: 20px;
+}
+.MenuPrincipal a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
 .central {
     border: 2px solid black;
     width: 50%;
@@ -35,13 +68,14 @@ button:hover {
     color: white;
 }
 a:visited {
-color: white;
+color: rgb(181, 42, 42);
 }
 a:active {
-color: white;
+color: rgb(53, 25, 123);
 }
 a:link {
     text-decoration: none;
+    color:rgb(37, 154, 146)
 }
 
 footer {
