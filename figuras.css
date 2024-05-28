@@ -1,0 +1,168 @@
+.figuras{
+    width: 100%;
+    height: 400px;
+    position:absolute;
+    z-index: -1;
+    opacity: 0.6;
+}
+.circulo{
+    position: relative;
+    top: 70px;
+    left: 95px;
+    width:65px;
+    height:65px;
+    border-radius:100%;
+    animation-name: acirculo;
+    background-color: #FBA222;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes acirculo{
+    0%{
+        transform: translateX(60px);
+        }
+    25%{
+        transform: translateY(70px);
+    } 
+    55%{
+        transform: translatex(80px);
+    }   
+    100%{
+        transform: translateY(80px);
+    }        
+    }
+.cuadrado{
+    position: relative;
+    top: 85px;
+    margin-left: 30px;
+    margin-top: 70px;
+    width: 65px;
+    height: 65px;
+    animation-name: acuadrado;
+    background-color: #8F92B3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }
+@keyframes acuadrado{
+
+    0%{
+    transform: translateY(100px);
+    transform: rotate(80deg);
+    }
+    35%{
+    transform: translateY(135px);
+    }  
+    85%{
+    transform: translateX(135px);
+    }        
+    }
+.triangulo{
+    position: relative;
+    top: 160px;
+    left: 50px;
+    width: 80px;
+    height: 80px;
+    background-image:
+    linear-gradient(to bottom left, transparent 50%, #D72F25 0),
+    linear-gradient(to top right, #D72F25 50%, transparent 0);
+    animation-name: atriangulo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }
+    @keyframes atriangulo{
+
+        0%{
+        transform: translateY(100px);
+        
+        transform: rotate(60deg);
+        }
+        45%{
+        transform: translateY(135px);
+        }  
+        65%{
+        transform: translateX(135px);
+        }        
+        }
+.circulo2{
+        position: relative;
+        top: 150px;
+        left: 1000px;
+        width: 65px;
+        height: 65px;
+        border-radius:100%;
+        animation-name: acirculo2;
+        background-color: #8F92B3;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        }
+@keyframes acirculo2{
+        0%{
+        transform: translateX(80px);
+        }
+        35%{
+        transform: translateY(95px);
+        } 
+        75%{
+        transform: translatex(50px);
+        }   
+        100%{
+        transform: translateY(85px);
+        }        
+        }
+.cuadrado2{
+        position: relative;
+        z-index: -2;
+        top: -300px;
+        left: 1000px;
+        width: 65px;
+        height: 65px;
+        animation-name: acirculo2;
+        background-color: #FBA222;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        }
+@keyframes acuadrado2{
+        0%{
+        transform: translateX(50px);
+        }
+        25%{
+        transform: translateY(75px);
+        } 
+        55%{
+        transform: translatex(50px);
+        }   
+        100%{
+        transform: translateY(85px);
+        }        
+        }
+.triangulo2{
+        position: relative;
+        top: -200px;
+        left: 1000px;
+        width: 70px;
+        height: 70px;
+        background-image:
+        linear-gradient(to bottom left, transparent 50%, #D72F25 0),
+        linear-gradient(to top right, #D72F25 50%, transparent 0);
+        animation-name: atriangulo2;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        }
+        @keyframes atriangulo2{
+        0%{
+        transform: translateY(100px);
+        transform: rotate(60deg);
+        }
+        45%{
+        transform: translateY(135px);
+        }  
+        65%{
+        transform: translateX(135px);
+        }        
+        }        

@@ -1,0 +1,127 @@
+//VARIABLES//
+
+let cards = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10]; *se repite una misma img 2 veces o se ponen solo 5 elementos?
+
+let card1 = null;
+let card2 = null;
+
+let firstResult = null;
+let secondResult = null;
+
+let cardUp = 0;
+
+let move = 0;
+let correct = 0;
+
+let timer = false;
+let timerOn = 30;
+
+let countDown = null;
+
+
+//to DIRECT WITH HTML 
+let showMove = document.getElementById ('move'); *move es un id que está en html (botón movimientos)
+let showCorrect = document.getElementById ('right'); *right es un id que está en html (botón aciertos)
+let showTime = document.getElementById('tiemporestante');
+
+
+
+//function random numbers
+
+cards = cards.sort( () => {return Math.random()} );
+
+
+
+//function timer
+
+function countTime (){
+	countDown = setInterval( ()	=> {
+		timerOn--;
+		showTime.innerHTML = 'Tiempo: ${timerOn} segundos';
+		if (timeOn == 0) {
+			clearInterval(countDown);
+			blockCard();
+		}	
+	}, 2000);
+
+}
+
+//function blockCard
+
+function blockCard(){
+	for (let i=0; i<=9, i++){
+		let cardIsBloked = document.getElementById(i);
+		cardIsBloked.innerHTML = cards[i];
+		cardIsBloked.disabled = true;}
+}
+
+
+//function unfold
+
+function unfold (id) {
+
+	if(timer = false){ 
+		countTime();
+		timer = true;
+	}
+
+
+
+	cardUp ++;
+	console.log (cardUp);
+if (cardUp == 1) {     
+	card1 = document.getElementById (id);
+	firstResult = cards [id];
+	card1.innerHTML = firstResult;
+	//disabled
+	card1.disabled = true;
+
+}else if (cardUp == 2){ 
+	card2 = document.getElementById (id);
+	secondResult = cards [id];
+	card2.innerHTML = secondResult; 
+
+	//disabled
+	card2.disabled = true;
+	
+	//increase moves
+	move ++;
+	showMove.innerHTML = 'Movimientos: $(move)';
+}
+if(firstResult == secondResult){
+
+	cardUp = 0;
+	
+
+	//increase correct
+	correct++;
+	showCorrect.innerHTML = 'Aciertos: $(correct)';
+
+	if(correct == 10){
+		showCorrect.innerHTML = 'Aciertos: $(correct)':) ;
+		showMove.innerHTML = 'Movimientos: $(move)' :> ;
+	}
+
+	
+
+}else{
+
+	setTimeOut( () => {
+	Card1.innerHTML = ' ';
+	card2.innerHTML = ' ';
+	card1.disabled = false;
+	card2.disabled = false;
+	cardUp = 0;
+}, 2000 );
+
+
+
+
+}
+	
+
+
+}
+
+
+

@@ -1,0 +1,100 @@
+body {
+    background-color: #fbecfa;
+    margin:0;
+}
+.central {
+    border: 2px solid black;
+    width: 50%;
+}
+.img {
+    width: 100%;
+    border:solid;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.boton1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+button {
+    border-radius: 5%;
+    border: 2px solid #EDBB0F;
+    width: 250px;
+    height: 75px;
+    background-color: #C2A9CE;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: blue;
+    color: white;
+}
+a:visited {
+color: white;
+}
+a:active {
+color: white;
+}
+a:link {
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    align-items:flex-end;
+    border: 2px solid black;
+    height: 8%;
+}
+
+.redes {
+display: flex;
+justify-content:spa;
+align-items: flex;
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: 40%;
+gap: 15px;
+margin-left: 15px;
+margin-bottom: 10px;
+
+
+}
+
+.redes img {
+width: 16px;
+height: 16px;
+
+}
+.legal {
+
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.legal ul{
+    display: flex;
+
+
+}
+.legal ul li{
+    display: flex;
+    text-decoration: none;
+    margin-right: 50px;
+    font-size: 12px;
+    align-items: center;
+    border: 1px solid purple;
+}
