@@ -10,7 +10,8 @@ body {
     text-align: center; /* Centra el contenido del cuerpo */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;    
+    box-sizing: border-box; 
+    
 }
 
 nav {
@@ -20,7 +21,7 @@ nav {
     width: 100%;
     padding: 10px 20px;
     border-bottom: 2px solid #61277D;
-    
+    font-family: 'Grenze Gotisch', sans-serif;  
 }
 
 .logo{   
@@ -47,6 +48,8 @@ nav {
 }
 .titulo{
     margin: 10px;
+    font-family: 'Grenze Gotisch', sans-serif;  
+    color: #7B4E90;
 }
 .central {
     width: 50%;
@@ -72,12 +75,15 @@ button {
     height: 75px;
     background-color: #C2A9CE;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
+    font-family: 'Grenze Gotisch', sans-serif;  
 }
 button:hover {
-    background-color: blue;
+    background-color: rgb(187, 187, 215);
     color: white;
+    font-family: 'Grenze Gotisch', sans-serif;  
+    font-size: 26PX;
 }
 a:visited {
 color: rgb(181, 42, 42);
