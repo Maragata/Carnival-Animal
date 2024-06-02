@@ -49,18 +49,15 @@ p{
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
-  
-    
-  }
-
+  justify-content: center;   
+}
 
 ::selection{
   color: #6e2b2b;
   background: #6563ff;
 }
 .wrapper{
-  width: 56%;
+  width: auto;
   padding: 25px;
   background: #62267E;
   border: 4px solid #EDBB0F;
@@ -73,13 +70,13 @@ p{
 .cards, .card, .view{
   margin-left: auto;
   margin-right: auto;
-  max-width:1000px;
+  max-width: 1000px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cards{
+.cards {
   height: 700px;
   width: 1060px;
   flex-wrap: wrap;
@@ -90,8 +87,12 @@ p{
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
-  height: calc(100% /4 - 10px);
-  width: calc(100% / 4 - 10px);
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 25%;
+  max-width: 25%;
+  min-height: 200px;
+  max-width: 200px;
   object-fit: cover;
 }
 .card.shake{
@@ -114,13 +115,12 @@ p{
     transform: translateX(8px);
   }
 }
-.cards .card .view{
+.cards .card .view {
   width: 80%;
   height: 100%;
   user-select: none;
   pointer-events: none;
   position: absolute;
-  background: #fff;
   border-radius: 7px;
   backface-visibility: hidden;
   transition: transform 0.25s linear;
@@ -135,8 +135,9 @@ p{
   transform: rotateY(-180deg);
 
 }
-.card .back-view img{
+.card .back-view img {
   width: 100%;
+  min-height: 200px;
   object-fit: cover;
   border-radius: 7%;
   
@@ -154,11 +155,12 @@ p{
   width: 10%;
   max-width: 250px;
   margin-left: 20px;
+  gap: 30px;
   
 }
 .details p{
   border: 4px solid white;
-  width: 300px;
+  width: 240px;
   height: 150px;
   border-radius: 10px;
   background-color:#3A23CB;
@@ -166,14 +168,13 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
 }
 
 
 .details button{
   cursor: pointer;
   border: 4px solid white;
-  width: 300px;
+  width: 240px;
   height: 150px;
   border-radius: 10px;
   background-color:#C188A9;
@@ -182,7 +183,7 @@ p{
   align-items: center;
   justify-content: center;
   font-size: large;
-  margin-top: 50px;
+
   }
 .details button:hover{
   color: #BD0D0D;
@@ -191,7 +192,7 @@ p{
 }
 
 
-@media screen and (max-width: 1150px) and (min-width: 760px) {
+@media screen and (max-width: 932px) {
 
   .main {
     display: flex;
@@ -199,35 +200,45 @@ p{
      }
   .nav{
     max-height: 50px;
+    margin-top: 10px;
   }
-    
+  img.flecha {
+    width: 40px;
+}
+   
   .contorno-time{
-  width: 120px;
+  width: 150px;
   height: 45px;
   border: 2px solid white;
+
   }
   .wrapper {
-    max-width:971px;
-    min-width: 655px;
-    margin-top:70px;
-    width: 75%;
+    max-width: 90%;
+    min-width: 90%;
+    margin-top: 70px;
+    margin-bottom: 0;
     max-height: 300px;
-    height: 232px;
-    
-  }
+    height: 300px;
+    padding: 1rem;
+}
   .cards {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
   }
 
-  .card {
-    max-width: 90px;
-    min-width: 70px;
-    object-fit: cover;
-  }
+  .cards .card {
+    min-width: 15%;
+    min-height: 125px;
+}
 
+.cards .card .view {
+  width: 100%;
+  height: 100%;
+}
   .card .front-view img,
   .card .back-view img {
+    min-height: 125px;
     width: 100%;
     object-fit: cover;
     border-radius: 7%;
@@ -238,16 +249,48 @@ p{
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
-    width: 400px;
     gap:10px;
-    
   }
-
   .details p, .details button {
     margin: 0;
-    height: 60px;
+    height: 35px;
     border: 2px solid white;
+    
   }
-  
+}
+
+@media screen and (max-width: 430px) {
+  .main {
+    justify-content: flex-start;
+  }
+  .nav {
+    position: relative;
+  }
+  .wrapper {
+    max-width: 95%;
+    min-width: 95%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    max-height: 85vh;
+    height: 85vh;
+    padding: 1.5rem;
+}
+.cards .card {
+  min-width: calc(50% - 5px);
+  min-height: 115px;
+  max-height: 115px;
+}
+.card .front-view img, .card .back-view img {
+  min-height: 115px;
+  max-height: 115px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 7%;
+}
+.details {
+  margin: 10px auto 0;
+}
 }
