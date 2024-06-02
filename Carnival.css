@@ -68,41 +68,64 @@ nav {
     justify-content: center;
 
 }
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
 
 .boton1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
 }
-button {
+.pulsa {
     border-radius: 1rem;
     border: 2px solid #EDBB0F;
-    width: 250px;
-    height: 75px;
+    width: fit-content;
     background-color: #d82b2b;
     color: #FEFFE4;
-    font-size: 24px;
+    font-size: 3rem;
+    padding: 0.25rem 2rem;
     font-weight: bold;
-    font-family: 'Grenze Gotisch', sans-serif;  
+    font-family: 'Grenze Gotisch', sans-serif;
     cursor: pointer;
 }
-button:hover {
+.pulsa:hover {
     background-color: rgb(187, 187, 215);
     color: white;
-    font-family: 'Grenze Gotisch', sans-serif;  
-    font-size: 26PX;
 }
-a:visited {
-color: rgb(51, 11, 88);
-}
-a:active {
-color: rgb(53, 25, 123);
-}
-a:link {
-    text-decoration: none;
-    color:rgb(37, 154, 146)
-}
+.name {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 200ms ease-in-out;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    border: 2px solid #383838;
+    font-family: 'Grenze Gotisch', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    text-align: center;
+    color: #000;
+    position: relative;
+    z-index: 9;
+  }
+  .pulsa.inactive {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .pulsa.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
 
 footer {
     display: flex;
@@ -189,20 +212,16 @@ max-width: 150px;
 max-height: 100px;
 }
 
-span.jugar {
-display: none;
-}
-
-.pulsa::after {
-content: "Jugar";
-}
-
-.pulsa::before {
-content: "";
-}
-
 .pulsa {
-position: relative;
+    position: relative;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    min-width: 200px;
+    font-size: 2.5rem;
+}
+
+.name {
+    max-width: 75%;
 }
 
 .redes {
@@ -228,12 +247,5 @@ footer {
 .legal ul li {
     width: fit-content;
 }
-.pulsa {
-    position: relative;
-    margin: 1rem auto;
-    width: fit-content;
-    height: fit-content;
-    padding: 0.5rem 2.5rem;
-    min-width: 200px;
-}
+
 }

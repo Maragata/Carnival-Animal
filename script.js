@@ -3,7 +3,7 @@ timeTag = document.querySelector(".time b"),
 flipsTag = document.querySelector(".flips b"),
 refreshBtn = document.querySelector(".details button");
 
-let maxTime = 20;
+let maxTime = 60;
 let timeLeft = maxTime;
 let flips = 0;
 let matchedCard = 0;
@@ -93,3 +93,11 @@ refreshBtn.addEventListener("click", shuffleCard);
 cards.forEach(card => {
     card.addEventListener("click", flipCard);
 });
+
+ //Muestra nombre jugador en la página del juego
+document.addEventListener('DOMContentLoaded', (event) => {
+    const playerName = localStorage.getItem('playerName');
+    if (playerName) {
+        document.getElementById('playerNameDisplay').innerText = playerName;
+    }
+})
