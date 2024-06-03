@@ -1,3 +1,16 @@
+/*Alert*/
+const open=document.getElementById('open');
+const modal=document.getElementById('modal-container');
+const close=document.getElementById('close');
+open.addEventListener('click',()=>{
+    modal.classList.add('show');
+    
+})
+close.addEventListener('click',()=>{
+    modal.classList.remove('show');
+})
+////////////////
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const playButton = document.querySelector('.pulsa');
