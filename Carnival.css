@@ -20,14 +20,11 @@ nav {
     align-items: center;
     width: 100%;
     padding: 10px 20px;
-    border-bottom: 2px solid #61277D;
     font-family: 'Grenze Gotisch', sans-serif;  
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.658);
-}
-.titulo {
-    font-family: 'Grenze Gotish', sans-serif;
-    color: #250336;
+    justify-content: space-between;
+    box-shadow: 1px 2px 6px 0.2px #c4a2d5;
+    
 }
 
 .logo{   
@@ -35,27 +32,11 @@ nav {
     height: 100px; /* Ajusta el tamaño del logo */
 }
 
-.MenuPrincipal {
-    list-style: none;
-    display: flex;
-}
-.MenuPrincipal li {
-    margin-left: 20px;
-    border: 1px solid #EDBB0F;
-    border-radius: 6px;
-    background-color: #C2A9CE;
-    width: 100%;
-    font-size: calc(1vw + 1vh);
-    padding: 6px;
-}
-.MenuPrincipal a {
-    text-decoration: none;
-    color: #333;
-}
 .titulo{
-    margin: 10px;
     font-family: 'Grenze Gotisch', sans-serif;  
-    color: #7B4E90;
+    color: #D82B2B;
+    font-size: 25px;
+    margin-top: 10px;
 }
 .central {
     width: 50%;
@@ -87,7 +68,7 @@ nav {
     border-radius: 1rem;
     border: 2px solid #EDBB0F;
     width: fit-content;
-    background-color: #d82b2b;
+    background-color: #D82B2B;
     color: #FEFFE4;
     font-size: 3rem;
     padding: 0.25rem 2rem;
@@ -180,19 +161,93 @@ height: 16px;
     background-color: #C2A9CE;
 }
 
-@media screen and (max-width: 430px) {
-.MenuPrincipal {
-    display: none;
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+
 }
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+#open {
+    font-family: "Grenze Gotisch", sans-serif;
+    background-color: #D82B2B;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: azure;
+    font-size: 24px;
+    padding: 10px 25px;
+    margin-right: 50px;
+}
+
+#close {
+    font-family: "Grenze Gotisch", sans-serif;
+    background-color: #D82B2B;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: azure;
+    font-size: 24px;
+    padding: 10px 25px;
+    margin-top: 16px;
+}
+.modal{
+    background-color: #fbecfa;
+    width: 700px;
+    max-width: 90%;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 2px solid #EDBB0F;
+}
+
+.modal h2{
+    margin: 0;
+    color: #D82B2B;
+
+
+}
+.modal p{
+    opacity: 0.7;
+    font-size: 25px;
+}
+.modal img {
+  max-width: 100px; /* Ajusta el ancho máximo de la imagen */
+  max-height: 100px; /* Ajusta el alto máximo de la imagen */
+  width: auto;
+  height: auto;
+  border-radius: 10px; / Añade un borde redondeado si lo deseas 
+}
+
+
+@media screen and (max-width: 430px) {
+
 .logo {
 
-max-width: 65px;
+max-width: 100px;
 
 }
 nav {
     padding: 0;
-
 }
+
+#open {
+    margin-right: 25px;
+    font-size: 1.5rem;
+}
+
 .img {
 width: 100%;
 min-height: 400px;

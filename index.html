@@ -9,19 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" media="only screen and (max-width:430px)" href="Carnival.css">
  <title>Inicio</title>
 </head>
 <body>
     <header>
         <nav>
             <img class="logo" src="images/logoWeb.svg" alt="logo">
-            <ul class="MenuPrincipal">
-                <li>INICIO</li>
-                <li><a href="http://127.0.0.1:5500/Carnival-Animal/juego.html">JUEGOS</a></li><!--<a href=""> Es un elace que llevar a la pagina del juego</a>-->
+            <button id="open" class="Pop-up">Información</button>
+                <div class="modal-container" id="modal-container">
+                    <div class="modal">
+                        <h2>Animal Carnival</h2>
+                        <img src="images/jugueton-mono-marron-lazo-rojo-cabeza_855892-5688.jpg" class="image" alt="">
+                        <p> Para jugar en Animal-Carnival solo necesitarás picar en el botón rojo donde dice "Empezar", luego pondrás tu nombre e irás al juego, espero que lo disfrutes.</p>
+                        <button id="close" class="Pop-up">Cerrar</button>
+                      
+                    </div>
+                </div>
                 
             </nav>
-            </ul>
+            
           
     </header>
     <main>
