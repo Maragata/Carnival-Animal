@@ -3,11 +3,28 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">  
-    <title>Memory Card Game | CodingNepal</title>
+   
     <link rel="stylesheet" href="juego.css">
+   <link rel="stylesheet" media="only screen and (max-width:932px)"  href="juego.css">
+   <link rel="shortcut icon" href="images/Logo.svg" type="image/x-icon">
+   <link rel="shortcut icon" href="images/Logo.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Carnival-Animal</title>
   </head>
   <body>
+    <div class="nav">
+     
+      <a href="index.html"> <img class="flecha" src="images/icons/Arrow.svg" alt="Imagen de una flecha roja "></a>
+   
+      <div class="contorno-time">
+      <p class="time">Tiempo: <span><b>20</b>s</span></p>
+    </div>
+    
+   </div>
+
+   <div class="main">
     <div class="wrapper">
       <ul class="cards">
         <li class="card">
@@ -106,14 +123,15 @@
             <img src="images/img-4.png" alt="card-img">
           </div>
         </li>
-        <div class="details">
-          <p class="time">Tiempo: <span><b>20</b>s</span></p>
-          <p class="flips">Flips: <span><b>0</b></span></p>
-          <button>Refresco</button>
-        </div>
+       
       </ul>
     </div>
-
+    <div class="details">
+      <p class="player-name">Jugador: &nbsp<span id="playerNameDisplay"></span></p>
+      <button>Refresco</button>
+      <p class="flips">Movimientos: &nbsp<span><b>0</b></span></p>
+    </div>
+  </div>
     <script src="script.js"></script>
     
   </body>
